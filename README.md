@@ -18,6 +18,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
+## Supabase Setup
+
+The app now includes Supabase helpers in `lib/supabase/server.js` and `lib/supabase/client.js`.
+
+You can use your current `.env` keys:
+
+```env
+API_URL=https://your-project-ref.supabase.co
+anon_public=your-anon-public-key
+service_role=your-service-role-key
+```
+
+Recommended for browser-side usage:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-public-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
+
+Important: never expose the service role key in client-side code.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
